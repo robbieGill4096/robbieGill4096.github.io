@@ -14,13 +14,7 @@ System.out.println("hola");
 Syntax highlighted code block
  
 ## Welcome to my site 
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
 As Kanye West said:
 
 > We're living the future so
