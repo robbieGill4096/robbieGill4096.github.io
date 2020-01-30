@@ -25,4 +25,5 @@ As Kanye West said:
 Format: ![Alt Text](https://c402277.ssl.cf1.rackcdn.com/photos/18134/images/hero_small/Medium_WW226365.jpg?1574452099)
 ```
 # Images 
-![My favorite animal](https://assets.weforum.org/article/image/large_ctmyyE7lj6GkY67Kao7wZzkXiK4vUdIingrupxOkGKk.jpg)
+![A picture of me!](https://assets.weforum.org/article/image/large_ctmyyE7lj6GkY67Kao7wZzkXiK4vUdIingrupxOkGKk.jpg)
+```self portrait```
