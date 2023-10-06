@@ -1,8 +1,44 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
 <body onresize="myFunction()">
 
-<p>Try to resize the browser window to display the windows height and width.</p>
+<h2>Two Equal Columns</h2>
+
+<div class="row" onresize="myFunction()">
+  <div class="" style="background-color:#aaa;" id="firstColumn">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
 
 <p id="demo"></p>
 
@@ -12,7 +48,24 @@ function myFunction() {
   let h = window.outerHeight;
   let txt = "Window size: width=" + w + ", height=" + h;
   document.getElementById("demo").innerHTML = txt;
+	console.log(w);  
+  
+  if (w < 1020) {
+  console.log("less then 1600")
+  const elem = document.getElementById("firstColumn");
+elem.className = "";
+  //const elem = document.getElementById("firstColumn");
+  //elem.className.remove("column");
+ 
+  }
+  else if (w >1020){
+  console.log("greater than 1020")
+  const elem = document.getElementById("firstColumn");
+	elem.className = "column";
 }
+  
+	
+  }
 </script>
 
 </body>
