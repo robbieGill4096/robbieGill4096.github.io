@@ -245,30 +245,19 @@ Exam</a></li>
 
 <script>
 
-
-function myFunction() {
-  let w = window.outerWidth;
-  let h = window.outerHeight;
-  let txt = "Window size: width=" + w + ", height=" + h;
-  document.getElementById("demo").innerHTML = txt;
-	console.log(w);  
-  
-  if (w < 1020) {
-  console.log("less then 1600")
-  const elem = document.getElementById("firstColumn");
-elem.className = "";
-  //const elem = document.getElementById("firstColumn");
-  //elem.className.remove("column");
- 
+function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
-  else if (w >1020){
-  console.log("greater than 1020")
-  const elem = document.getElementById("firstColumn");
-	elem.className = "column";
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
-  
-	
-  }
 </script>
    
 </body>
