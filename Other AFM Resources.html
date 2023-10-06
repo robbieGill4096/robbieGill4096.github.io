@@ -30,13 +30,41 @@
 
 <div class="row" onresize="myFunction()">
   <div class="" style="background-color:#aaa;" id="firstColumn">
-    <h2>Column 1</h2>
-    <p>Some text..</p>
+    <div class="">
+	<h3>Policies &amp; Procedures</h3>
+	<h4>Policies</h4>
+	<ul>
+	<li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/SSL-Policies-1_4.pdf">SSL Policies</a></li>
+	<li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/SSL-Fee-Schedule-2_0.pdf">SSL Fee Schedule</a>
+	<ul>
+	<li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/SSL-Fee-Schedule-2_0-Academic-Government.pdf">SSL Fee Schedule (Academic &amp; Government)</a></li>
+	<li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/SSL-Fee-Schedule-2_0-Industry.pdf">SSL Fee Schedule (Industry)</a></li>
+	</ul>
+	</li>
+	</ul>
+	<h4>Procedures</h4>
+	<ul>
+	<li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/10/SSL-Common-Terms-and-Abbreviations-1_0.pdf">SSL Common Terms and Abbreviations</a></li>
+	<li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/SSL-iLab-Intro.pdf">SSL iLab Intro</a></li>
+	</ul>
+	</div>
   </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    <p>Some text..</p>
-  </div>
+  <div class="column" style="background-color:#bbb;" id="secondColumn">
+    <div class="">
+        <h3>Access &amp; Services</h3>
+            <h4><strong>AFM Imaging &amp; Analysis</strong></h4>
+            <ul>
+            <li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/AFM-Imaging-Request-Form-1_1-Blank.pdf">AFM Imaging Request Form</a></li>
+            <li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/Analytical-Services-Agreement-2016-05-19.pdf">Analytical Services Agreement (Industry)</a></li>
+            </ul>
+            <h4><strong>AFM/SSL Access</strong></h4>
+            <ul>
+            <li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/SSL-Use-Request-Form-2_0-Blank.pdf">SSL Use Request Form</a></li>
+            <li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/Advanced-AFM-Use-Request-Form-Blank.pdf">Advanced AFM Use Request Form</a></li>
+            <li><a href="https://www.boisestate.edu/wp-content/uploads/sites/551/2022/08/nanoIR3-AFM-Use-Request-Form-v1.pdf">nanoIR3 AFM Use Request Form</a></li>
+            </ul>
+            
+            </div>
 </div>
 
 
@@ -52,16 +80,22 @@ function myFunction() {
   
   if (w < 1020) {
   console.log("less then 1600")
-  const elem = document.getElementById("firstColumn");
-elem.className = "";
+  const elem1 = document.getElementById("firstColumn");
+elem1.className = "";
+
+const elem2 = document.getElementById("secondColumn");
+elem2.className = "";
   //const elem = document.getElementById("firstColumn");
   //elem.className.remove("column");
  
   }
   else if (w >1020){
   console.log("greater than 1020")
-  const elem = document.getElementById("firstColumn");
-	elem.className = "column";
+  const elem1 = document.getElementById("firstColumn");
+	elem1.className = "column";
+
+    const elem2 = document.getElementById("secondColumn");
+	elem2.className = "column";
 }
   
 	
@@ -70,4 +104,7 @@ elem.className = "";
 
 </body>
 </html>
+
+
+
 
