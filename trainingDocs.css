@@ -1,0 +1,97 @@
+/* Style the tab */
+
+
+.breadcrumbs {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.breadcrumbs__item{
+    display:inline-block;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after{
+    content: '\203a';
+    margin: 0 5px;
+    color: lightgrey;
+}
+.breadcrumbs__link {
+    text-decoration: none;
+    color:darkgrey;
+
+}
+.breadcrumbs__link:hover {
+    text-decoration: underline;
+    
+}
+.breadcrumbs__link--active {
+    color: orange;
+    
+}
+.heading{
+  text-align:center;
+  color:black;
+  font-size: 50px;
+
+  font-family: 'Roboto', sans-serif;
+  }
+
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
