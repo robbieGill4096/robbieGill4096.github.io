@@ -26,9 +26,10 @@
 .breadcrumbs__link:hover {
     text-decoration: underline;
     
+    
 }
 .breadcrumbs__link--active {
-    color: grey;
+    color: orange;
     
 }
 
@@ -117,6 +118,7 @@ font-size: 50px;
     color:black;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
+    
     }
 
 .container .box-container{
@@ -136,6 +138,7 @@ font-size: 50px;
     text-align: center;
     padding:30px 20px;
     justify-items: center;
+    font-weight: bold;
 }
 
 
@@ -176,6 +179,8 @@ font-size: 50px;
 
 .container .box-container .box .btn:hover {
     letter-spacing: 1px;
+    color: orange;
+
     
     
 }
