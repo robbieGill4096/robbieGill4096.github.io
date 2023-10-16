@@ -24,14 +24,14 @@
 
     </ul>
     <div class="tab">
-      <button class="tablinks" id="general-btn" onclick="openTab(event, 'Policies-and-Access')">General</button>
-      <button class="tablinks" id="afrm-btn" onclick="openTab(event, 'Exams-and-SOPs')">AFM Probes</button>
-      <button class="tablinks" id="manufacturers-btn" onclick="openTab(event, 'Manuals')">Manufacturers</button>
+      <button class="tablinks" id="general-btn" onclick="openTab(event, 'General')">General</button>
+      <button class="tablinks" id="afrm-btn" onclick="openTab(event, 'AFM-Probes')">AFM Probes</button>
+      <button class="tablinks" id="manufacturers-btn" onclick="openTab(event, 'Manufacturers')">Manufacturers</button>
       <button class="tablinks" id="media-btn" onclick="openTab(event, 'Media')">Media</button>
     </div>
 
 
-    <div id="Policies-and-Access" class="tabcontent">
+    <div id="General" class="tabcontent">
       <div class="row" onresize="myFunction()">
           <div class="column" id="firstColumnPolicy" href="#Policies">
   
@@ -53,7 +53,7 @@
       </div>
   </div>
   
-  <div id="Exams-and-SOPs" class="tabcontent">
+  <div id="AFM-Probes" class="tabcontent">
       <div class="row" onresize="myFunction()">
           <div class="column"id="firstColumnExam">
 
@@ -83,7 +83,7 @@
       </div>
   </div>
   
-  <div id="Manuals" class="tabcontent">
+  <div id="Manufacturers" class="tabcontent">
       <div class="row" onresize="myFunction()">
           <div class="column"id="firstColumnManual">
 
@@ -138,19 +138,19 @@
     console.log(document.URL)
 
 
-    if(hash =="#Manuals"){
+    if(hash =="#Manufacturers"){
 
         console.log("tab 2 hash ");
-        //openTab(event, 'Manuals');
-        openTabHash('manufacturers-btn','Manuals')
+        //openTab(event, 'Manufacturers');
+        openTabHash('manufacturers-btn','Manufacturers')
     }
-    else if(hash =="#Exams-and-SOPs"){
+    else if(hash =="#AFM-Probes"){
     
       
-        openTabHash('afrm-btn','Exams-and-SOPs')
+        openTabHash('afrm-btn','AFM-Probes')
     }
-    else if (hash =="#Policies-and-Access"){
-      openTabHash('general-btn','Policies-and-Access')
+    else if (hash =="#General"){
+      openTabHash('general-btn','General')
 
     }
     else if(hash =="#Media"){
@@ -162,7 +162,7 @@
 
     else {
     //set default to first tab
-    openTabHash('general-btn','Policies-and-Access')
+    openTabHash('general-btn','General')
 
     }
 
