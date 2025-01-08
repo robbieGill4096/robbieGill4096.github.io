@@ -1,50 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rob Gill</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        color: white;
+      }
 
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/5hb7BaxuGR0sde2aLZw3jVA4fIys04Axu6H+7L"
-    crossorigin="anonymous"
-  >
-</head>
-<body>
+      .profile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
 
-  <!-- Add your Bootstrap components here -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">My Website</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
+      .profile img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      nav {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      #content-container {
+        margin: 20px;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black;
+        text-align: center;
+        max-width: 800px;
+        border-radius: 10px;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        font-size: 16px;
+        color: #fff;
+        background-color: rgba(77, 191, 128, 0.9);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        background-color: rgba(78, 150, 111);
+      }
+
+      footer {
+        width: 100%;
+        background-color: rgba(248, 249, 250, 0.8);
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      footer ul li {
+        margin: 0 10px;
+      }
+
+      footer ul li a {
+        text-decoration: none;
+        color: #007BFF;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+        }
+
+        .profile {
+          justify-content: center;
+        }
+
+        footer ul {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile">
+      <img src="robbie_PNW_1.jpg" alt="Profile Image">
     </div>
-  </nav>
-  <!-- Bootstrap JavaScript -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-VoPF8eLMtLkAq7dYbL8y1ENq3kgNSEadZkOQkfbIu4z09c4Tsh1iVWNhXWZ8d+EJ"
-    crossorigin="anonymous"
-  ></script>
-</body>
+
+    <nav>
+      <ul>
+        <li><a href="#about" onclick="showAbout()">About</a></li>
+        <li><a href="#projects" onclick="showProjects()">Projects</a></li>
+        <li><a href="#contact" onclick="showContact()">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="content-container">
+      Hi, I'm Rob.  I'm a full stack developer, and I love building software and solving problems. 
+      I also have a passion for art design and fabrication, and I enjoy spending time outdoors.
+    </div>
+
+    <div class="content">
+      <a href="RobbieGillResume.pdf" class="btn" download>My Resume</a>
+    </div>
+
+  
+
+    <script>
+      // JavaScript functions to update content
+      function showAbout() {
+        const contentContainer = document.getElementById('content-container');
+        contentContainer.innerHTML = `
+          <p>Hi, I'm Rob.<br />
+          I'm a full stack developer, I'm knowledgable in I love building software and solving problems. 
+          I also have a passion for art design and fabrication, and I enjoy spending time outdoors.</p>
+        `;
+      }
+
+      function showProjects() {
+        const contentContainer = document.getElementById('content-container');
+        contentContainer.innerHTML = `
+          <h2>My Projects</h2>
+          <ul>
+            <li><strong>Project 1:</strong> A full-stack web application for task management.</li>
+            <li><strong>Project 2:</strong> A machine learning model for image classification.</li>
+            <li><strong>Project 3:</strong> A mobile app for tracking fitness goals.</li>
+          </ul>
+        `;
+      }
+
+      function showContact() {
+        const contentContainer = document.getElementById('content-container');
+        contentContainer.innerHTML = `
+        
+          
+      <ul>
+        <li><a href="mailto:robbiegill@u.boisestate.edu">Email Me</a></li>
+        <li><a href="https://www.linkedin.com/in/robbie-gill-6b604816b/">LinkedIn</a></li>
+        <li><a href="https://github.com/robbieGill4096">GitHub</a></li>
+      </ul>
+        `;
+      }
+    </script>
+    
+  </body>
 </html>
